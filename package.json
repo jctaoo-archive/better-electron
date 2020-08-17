@@ -42,17 +42,8 @@
     "@vue/test-utils": "^1.0.3",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^6.2.2",
-    "lint-staged": "^9.5.0",
     "spectron": "^11.0.0",
     "typescript": "~3.9.3",
     "vue-template-compiler": "^2.6.11"
-  },
-  "gitHooks": {
-  },
-  "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
   }
 }
