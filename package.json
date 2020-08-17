@@ -15,10 +15,13 @@
   },
   "main": "lib/background.js",
   "dependencies": {
+    "@types/electron-store": "^3.2.0",
     "core-js": "^3.6.5",
     "electron": "^9.0.0",
     "electron-devtools-installer": "^3.1.0",
+    "electron-store": "^6.0.0",
     "eslint": "^6.7.2",
+    "reflect-metadata": "^0.1.13",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-cli-plugin-electron-builder": "^2.0.0-rc.4",

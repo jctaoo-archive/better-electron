@@ -1,8 +1,11 @@
-import { app, protocol, BrowserWindow } from 'electron';
+import { app, protocol, BrowserWindow, Notification, systemPreferences } from 'electron';
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib';
+import Store from 'electron-store';
 import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer';
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
+
+const store = new Store();
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
