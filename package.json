@@ -13,7 +13,7 @@
     "postuninstall": "electron-builder install-app-deps",
     "commit": "git-cz"
   },
-  "main": "src/lib/main.ts",
+  "main": "background.js",
   "dependencies": {
     "@types/electron-store": "^3.2.0",
     "core-js": "^3.6.5",
