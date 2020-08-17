@@ -3,13 +3,14 @@
  */
 import spectron from 'spectron';
 import { testWithSpectron } from 'vue-cli-plugin-electron-builder';
+
 jest.setTimeout(50000);
 
 test('Window Loads Properly', async () => {
   // Wait for dev server to start
   const { app, stopServe } = await testWithSpectron(spectron);
   const win = app.browserWindow;
-  const client = app.client;
+  const { client } = app;
 
   // Window was created
   expect(await client.getWindowCount()).toBe(1);
@@ -24,9 +25,9 @@ test('Window Loads Properly', async () => {
   // App is loaded properly
   expect(
     /Welcome to Your Vue\.js (\+ TypeScript )?App/.test(
-      await (await client.$("#app")).getHTML()
-    )
+      await (await client.$('#app')).getHTML(),
+    ),
   ).toBe(true);
 
   await stopServe();
-})
+});
